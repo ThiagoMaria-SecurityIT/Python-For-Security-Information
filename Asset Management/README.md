@@ -8,18 +8,16 @@ A hardware (computer focused) asset management system with ISO 27001 compliance 
 
 <table>
   <tr>
-    <td><img src="images/im1.png" alt="1" width="800"></td>
-    <td><img src="images/im2.png" alt="2" width="800"></td>
-    <td><img src="images/im3.png" alt="3" width="800"></td>
-    <td><img src="images/im4.png" alt="4" width="800"></td>
-    <td><img src="images/im5.png" alt="5" width="800"></td>
+    <td><img src="images/im1.png" alt="1" width="500"></td>
+    <td><img src="images/im2.png" alt="2" width="500"></td>
+    <td><img src="images/im3.png" alt="3" width="500"></td>
+    <td><img src="images/im4.png" alt="4" width="500"></td>
   </tr>
   <tr>
-    <td style="text-align: center;">1 </td>
-    <td style="text-align: center;">2 </td>
-    <td style="text-align: center;">3 </td>
-    <td style="text-align: center;">4 </td>
-    <td style="text-align: center;">5 </td>
+    <td style="text-align: center;">Asset Management tab </td>
+    <td style="text-align: center;">Employee Management tab </td>
+    <td style="text-align: center;">Reports tab </td>
+    <td style="text-align: center;">Audit Logs tab </td>
   </tr>
 </table>
 
