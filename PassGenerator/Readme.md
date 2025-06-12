@@ -7,7 +7,7 @@
 A cryptographically secure password generator application built with Python and Tkinter.  
 Designed for users who need reliable password generation without unnecessary complexity.
 
-![App Screenshot](https://github.com/ThiagoMaria-SecurityIT/Tutoriais/blob/main/SecurePassGenerator/images/securimathiago2.png) 
+![App Screenshot](https://github.com/ThiagoMaria-SecurityIT/Python/blob/main/PassGenerator/images/securimathiago2.png)  
 
 ## Key Features
 
