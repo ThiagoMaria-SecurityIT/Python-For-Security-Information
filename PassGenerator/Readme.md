@@ -149,7 +149,7 @@ Cheers to DeepSeek's AI for not judging my 3AM coding questions.
 While the passwords are **pro-level secure**, treat the code like a beginner skateboarder – **wear a helmet!** 🛹⚠️  
 
 ## 📜 License  
-MIT License © Thiago Maria - See [LICENSE](LICENSE) for full details – *Use it, share it.*  
+MIT License © Thiago Maria - See [LICENSE](https://github.com/ThiagoMaria-SecurityIT/Python/blob/main/LICENSE) for full details – *Use it, share it.*  
 
 ## Acknowledgements
 - Python Cryptographic Authority for the `secrets` module
