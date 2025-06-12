@@ -1,5 +1,8 @@
 # Simple Access Control System
 
+#### Love this tool or want to see more upgrades? Help me keep it updated!  
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red?logo=GitHub&style=for-the-badge)](https://github.com/sponsors/ThiagoMaria-SecurityIT)
 ## Overview
 
 This Python application provides a comprehensive solution for managing both physical and logical access control within an organization. The system helps administrators regulate who can access specific physical locations (like offices and secure areas) and digital resources (such as systems, networks, and sensitive data).
