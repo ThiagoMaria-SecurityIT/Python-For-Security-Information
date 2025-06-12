@@ -1,6 +1,14 @@
 # **Python Security Information Repository**  
-**Created on June 12, 2025**  
 
+**Created on June 12, 2025**   
+
+ Support This Project  
+
+* Want to see more upgrades? Help me keep it updated!  
+* _Ways to Contribute:_ ⬇️  
+*>>>>>>>>>>> [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red)](https://github.com/sponsors/ThiagoMaria-SecurityIT) <<<<<<<<<<<*  
+---
+### What is this?  
 A Python repository dedicated to **security information**, **defensive cybersecurity**, **risk management**, **incident response**, and related IT fields with Python code/scripts.  
 
 > [!NOTE]  
