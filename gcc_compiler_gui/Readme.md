@@ -4,7 +4,7 @@
 This application provides a graphical interface for compiling and running C programs using GCC, with optional Windows Sandbox support for secure compilation of untrusted code.
 
 <p align="center">
-  <img src="./images/image1.png" alt="GCC Compiler GUI Screenshot" width="600">
+  <img src="./image/image1.png" alt="GCC Compiler GUI Screenshot" width="600">
   <br>
   <em>GCC Compiler GUI Interface</em>
 </p>
