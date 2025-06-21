@@ -78,7 +78,14 @@ This tool provides a user-friendly interface with the following functionalities:
    - **Script Path**
    - **Python Executable**
 3. Use the "Browse" buttons to locate directories or files easily.
+4.  You can change the  Default paths in this part of the code:
 
+```python
+# Default paths (can be pre-filled)
+     self.env_entry.insert(0, os.path.expanduser(os.path.join("~", "Documents", "Projects", "my_project", "venv")))
+     self.script_entry.insert(0, os.path.expanduser(os.path.join("~", "Documents", "Projects", "my_project", "script.py")))
+     self.py_path_entry.insert(0, self._get_default_python_path())
+```
 ### Generating Commands
 
 - Navigate through the tabs (Basic Commands, Advanced Commands, etc.) to find pre-defined command templates.
