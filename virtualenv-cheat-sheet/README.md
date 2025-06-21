@@ -52,7 +52,7 @@ This tool provides a user-friendly interface with the following functionalities:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/virtualenv-cheat-sheet.git
+   git clone https://github.com/ThiagoMaria-SecurityIT/Python/virtualenv-cheat-sheet.git
    cd virtualenv-cheat-sheet
    ```
 
@@ -114,10 +114,11 @@ This tool provides a user-friendly interface with the following functionalities:
 *The main interface with dark theme and command tabs.*
 
 ![Terminal Output](./screenshots/terminal_output.png)  
-*Integrated terminal showing command output.*
+*Integrated terminal showing command output.*  
 
-*(Add actual screenshots of your application here.)*
+![All Tabs](screenshots/alltabs.png)  
 
+All tabs together (made with Paint 😅).
 ---
 
 ## Contributing
