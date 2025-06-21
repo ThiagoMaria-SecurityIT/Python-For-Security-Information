@@ -3,7 +3,7 @@
 ![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A **Tkinter-based GUI tool** designed to simplify the management of Python virtual environments and execution of PowerShell commands. Tailored for developers and IT professionals, this cheat sheet tool helps streamline common development tasks such as setting environment variables, generating commands, executing scripts, and more.
+A (Windows 11) **Tkinter-based GUI tool** designed to simplify the management of Python virtual environments and execution of PowerShell commands. Tailored for developers and IT professionals, this cheat sheet tool helps streamline common development tasks such as setting environment variables, generating commands, executing scripts, and more.
 
 ---
 
