@@ -32,10 +32,20 @@ Contributions are welcome! Best topics for contributions:
 - **Practical focus**: Scripts are designed for real-world defensive use cases.  
 - **Learning-friendly**: Clean code with explanations (not all codes have explanations) for security newcomers.
   
-### Let's talk:
-🤵🏽[LinkedIn: thiago-cequeira-99202239](https://www.linkedin.com/in/thiago-cequeira-99202239/) \
-🤗[Hugging Face: ThiSecur](https://huggingface.co/ThiSecur)
+## About the Author   
 
- Want to see more upgrades? Help me keep it updated!  
- _Ways to Contribute:_ ⬇️  
-*>>>>>>>>>>> [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red)](https://github.com/sponsors/ThiagoMaria-SecurityIT) <<<<<<<<<<<* 
+**Thiago de Maria - From Brazil to the World 🌎**  
+*Senior Security Information Professional | Passionate Programmer*
+
+With a professional background in security analysis and a deep passion for programming, I created this repo share some knowledge about security information, cybersecurity, Python and development practices. Most of my work here focuses on implementing security-first approaches in developer tools while maintaining usability.
+
+Lets Connect:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/thiago-cequeira-99202239/)  
+[![Hugging Face](https://img.shields.io/badge/🤗Hugging_Face-AI_projects-yellow)](https://huggingface.co/ThiSecur)
+
+ 
+## _Ways to Contribute:_   
+ Want to see more upgrades? Help me keep it updated!    
+ [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red)](https://github.com/sponsors/ThiagoMaria-SecurityIT) 
+
