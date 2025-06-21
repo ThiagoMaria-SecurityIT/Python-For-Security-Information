@@ -4,9 +4,12 @@
 ![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A Tkinter-based GUI tool for managing Python virtual environments and executing PowerShell commands — built for developers and IT professionals on Windows 11 (but cross-platform compatible).
+A Tkinter-based GUI tool for managing Python virtual environments and executing PowerShell commands — built for developers and IT professionals on Windows 11 (but cross-platform compatible).  
+| Main Interface | 
+|---------------|
+| ![Main Interface](./screenshots/main_interface.png) | 
 
----
+
 
 ## 📋 Features
 
@@ -76,24 +79,10 @@ You can also modify default paths in the code:
 
 ## 🖼️ Screenshots
 
-| Main Interface | Terminal Output |
-|---------------|------------------|
-| ![Main Interface](./screenshots/main_interface.png) | ![Terminal Output](./screenshots/terminal_output.png) |
-
 | *All tabs together:* | 
 |---------------------|
 ![All Tabs](screenshots/alltabs.png) *(made with Paint 😅)*
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Commit changes
-4. Push to your fork
-5. Open a Pull Request
 ---
 
 ## 📄 License
