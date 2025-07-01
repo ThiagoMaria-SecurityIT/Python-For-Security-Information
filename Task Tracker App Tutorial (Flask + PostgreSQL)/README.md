@@ -1154,12 +1154,12 @@ This is a basic functional prototype. Here are some ideas for how you could expa
 *   **Testing:** Write unit and integration tests for your backend and frontend.
 *   **Progress Tracking:** Implement the "Streak" and visual "Progress" bars using more complex logic or frontend libraries.
 
-This should give you a solid foundation to build upon! Let me know if you have any specific questions about parts of the code or want to explore any of these enhancements further.
+### __This should give you a solid foundation to build upon! Let me know if you have any specific questions about parts of the code or want to explore any of these enhancements or contribute: [Let's Connect](#lets-connect).__
 
 ## Made with love and Manus AI
-This tutorial has parts and was made with the help of AI. 
-The AI to create the codes was Manus AI and is under review by me from July 01, 2025 to July 07, 2025.  
-
+This tutorial has parts and was made with the help of AI.   
+>[!WARNING]  
+>The AI used for creating the codes was Manus AI and the codes are under assessment by me from July 01, 2025, to July 07, 2025. 
 ## About the Author   
 
 **Thiago Maria - From Brazil to the World 🌎**  
@@ -1167,13 +1167,13 @@ The AI to create the codes was Manus AI and is under review by me from July 01, 
 
 With a professional background in security analysis and a deep passion for programming, I created this Github acc to share some knowledge about security information & compliance, cybersecurity, Python and AI development practices. Most of my work here focuses on implementing security-first approaches in developer tools while maintaining usability.
 
-Lets Connect:
+## Lets Connect:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/thiago-cequeira-99202239/)  
 [![Hugging Face](https://img.shields.io/badge/🤗Hugging_Face-AI_projects-yellow)](https://huggingface.co/ThiSecur)
 
  
 ## Ways to Contribute:   
-You can send me messages or emails by any of my social media or directly here!
+You can send me messages or emails by any of my social media or directly here!  
 Want to see more upgrades? Help me keep it updated!    
  [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red)](https://github.com/sponsors/ThiagoMaria-SecurityIT) 
