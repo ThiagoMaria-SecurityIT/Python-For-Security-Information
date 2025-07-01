@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Task Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #e9e9e9;
+        }
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        form input[type="text"],
+        form input[type="date"],
+        form select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        form button {
+            grid-column: span 2;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        .task-list {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .task-row {
+            background-color: white;
+        }
+        .task-row:hover {
+            background-color: #f9f9f9;
+        }
+        .task-row.completed {
+            text-decoration: line-through;
+            color: #888;
+            background-color: #e0ffe0;
+        }
+        .actions button {
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .actions .edit-btn {
+            background-color: #ffc107;
+            color: black;
+        }
+        .actions .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .actions .edit-btn:hover { background-color: #e0a800; }
+        .actions .delete-btn:hover { background-color: #c82333; }
+
+        .category-label {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Tracker</h1>
+
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+            <div>
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="taskName" required>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <select id="category" required></select>
+            </div>
+            <div>
+                <label for="priority">Priority:</label>
+                <select id="priority" required>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div>
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate">
+            </div>
+            <div>
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="Not Started">Not Started</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Blocked">Blocked</option>
+                    <option value="Deferred">Deferred</option>
+                </select>
+            </div>
+            <div>
+                <label for="isRecurring">Recurring:</label>
+                <input type="checkbox" id="isRecurring">
+            </div>
+            <div id="recurringOptions" style="display: none;">
+                <label for="frequency">Frequency:</label>
+                <select id="frequency">
+                    <option value="">-- Select --</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Bi-weekly">Bi-weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Annually">Annually</option>
+                </select>
+                <label for="lastDone">Last Done (for recurring):</label>
+                <input type="date" id="lastDone">
+            </div>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <h2>My Tasks</h2>
+        <div class="task-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Category</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Recurring</th>
+                        <th>Frequency</th>
+                        <th>Last Done</th>
+                        <th>Next Due</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasksTableBody">
+                    <!-- Tasks will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = ''; // Flask serves from root
+        const taskForm = document.getElementById('taskForm');
+        const tasksTableBody = document.getElementById('tasksTableBody');
+        const categorySelect = document.getElementById('category');
+        const isRecurringCheckbox = document.getElementById('isRecurring');
+        const recurringOptionsDiv = document.getElementById('recurringOptions');
+        let categories = []; // To store fetched categories
+
+        // --- Fetch Categories and Populate Dropdown ---
+        async function fetchCategories() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/categories`);
+                categories = await response.json();
+                categorySelect.innerHTML = ''; // Clear existing options
+                categories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat.id;
+                    option.textContent = cat.name;
+                    categorySelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+            }
+        }
+
+        // --- Toggle Recurring Options Visibility ---
+        isRecurringCheckbox.addEventListener('change', () => {
+            recurringOptionsDiv.style.display = isRecurringCheckbox.checked ? 'block' : 'none';
+        });
+
+        // --- Fetch and Display Tasks ---
+        async function fetchTasks() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/tasks`);
+                const tasks = await response.json();
+                tasksTableBody.innerHTML = ''; // Clear existing tasks
+                tasks.forEach(task => {
+                    const row = tasksTableBody.insertRow();
+                    row.dataset.taskId = task.id; // Store task ID on the row
+                    row.classList.add('task-row');
+                    if (task.status === 'Completed') {
+                        row.classList.add('completed');
+                    }
+
+                    const categoryColor = task.category_color || '#ccc'; // Default if not found
+
+                    row.innerHTML = `
+                        <td>${task.name}</td>
+                        <td><span class="category-label" style="background-color: ${categoryColor};">${task.category_name}</span></td>
+                        <td>${task.priority}</td>
+                        <td>${task.due_date || 'N/A'}</td>
+                        <td>${task.status}</td>
+                        <td>${task.is_recurring ? 'Yes' : 'No'}</td>
+                        <td>${task.frequency || 'N/A'}</td>
+                        <td>${task.last_done || 'N/A'}</td>
+                        <td>${task.next_due || 'N/A'}</td>
+                        <td class="actions">
+                            <button class="edit-btn" onclick="editTask(${task.id})">Edit</button>
+                            <button class="delete-btn" onclick="deleteTask(${task.id})">Delete</button>
+                        </td>
+                    `;
+                });
+            } catch (error) {
+                console.error('Error fetching tasks:', error);
+            }
+        }
+
+        // --- Add/Update Task ---
+        taskForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const taskId = taskForm.dataset.editingTaskId; // Check if we are editing
+            const method = taskId ? 'PUT' : 'POST';
+            const url = taskId ? `${API_BASE_URL}/api/tasks/${taskId}` : `${API_BASE_URL}/api/tasks`;
+
+            const taskData = {
+                name: document.getElementById('taskName').value,
+                category_id: parseInt(document.getElementById('category').value),
+                priority: document.getElementById('priority').value,
+                due_date: document.getElementById('dueDate').value || null,
+                status: document.getElementById('status').value,
+                is_recurring: document.getElementById('isRecurring').checked,
+                frequency: document.getElementById('frequency').value || null,
+                last_done: document.getElementById('lastDone').value || null,
+                next_due: null // Backend will calculate for recurring on completion
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(taskData),
+                });
+
+                if (response.ok) {
+                    taskForm.reset(); // Clear form
+                    delete taskForm.dataset.editingTaskId; // Remove editing state
+                    document.querySelector('#taskForm button[type="submit"]').textContent = 'Add Task'; // Reset button text
+                    recurringOptionsDiv.style.display = 'none'; // Hide recurring options
+                    await fetchTasks(); // Refresh task list
+                } else {
+                    const errorData = await response.json();
+                    alert(`Error: ${errorData.message || response.statusText}`);
+                }
+            } catch (error) {
+                console.error('Error submitting task:', error);
+                alert('An error occurred while submitting the task.');
+            }
+        });
+
+        // --- Edit Task (Populate Form) ---
+        async function editTask(id) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/tasks/${id}`);
+                const task = await response.json();
+
+                document.getElementById('taskName').value = task.name;
+                document.getElementById('category').value = task.category_id;
+                document.getElementById('priority').value = task.priority;
+                document.getElementById('dueDate').value = task.due_date;
+                document.getElementById('status').value = task.status;
+                document.getElementById('isRecurring').checked = task.is_recurring;
+                document.getElementById('frequency').value = task.frequency || '';
+                document.getElementById('lastDone').value = task.last_done;
+
+                recurringOptionsDiv.style.display = task.is_recurring ? 'block' : 'none';
+
+                taskForm.dataset.editingTaskId = id; // Store ID to indicate editing mode
+                document.querySelector('#taskForm button[type="submit"]').textContent = 'Update Task';
+            } catch (error) {
+                console.error('Error fetching task for edit:', error);
+            }
+        }
+
+        // --- Delete Task ---
+        async function deleteTask(id) {
+            if (confirm('Are you sure you want to delete this task?')) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/tasks/${id}`, {
+                        method: 'DELETE',
+                    });
+
+                    if (response.ok) {
+                        await fetchTasks(); // Refresh task list
+                    } else {
+                        const errorData = await response.json();
+                        alert(`Error: ${errorData.message || response.statusText}`);
+                    }
+                } catch (error) {
+                    console.error('Error deleting task:', error);
+                    alert('An error occurred while deleting the task.');
+                }
+            }
+        }
+
+        // --- Initial Load ---
+        document.addEventListener('DOMContentLoaded', async () => {
+            await fetchCategories();
+            await fetchTasks();
+        });
+    </script>
+</body>
+</html>
