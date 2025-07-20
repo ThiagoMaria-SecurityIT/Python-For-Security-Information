@@ -4,7 +4,9 @@
 
  Support This Project   
  [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red)](https://github.com/sponsors/ThiagoMaria-SecurityIT)  
----
+---  
+🔐 Security Disclaimer: These scripts are for educational and ethical security purposes only. Always ensure you have proper authorization before testing systems you don't own.   
+
 ### What is this?  
 A Python repository dedicated to **security information**, **defensive cybersecurity**, **risk management**, **incident response**, and related IT fields with Python code/scripts.  
 
