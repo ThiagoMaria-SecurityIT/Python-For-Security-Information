@@ -33,6 +33,10 @@ Contributions are welcome! Best topics for contributions:
 - **Safe for work/research**: No offensive tools or exploits.  
 - **Practical focus**: Scripts are designed for real-world defensive use cases.  
 - **Learning-friendly**: Clean code with explanations (not all codes have explanations) for security newcomers.
+
+### Tutorials
+Looking for step-by-step guides and tutorials?  
+➡ Check out my other repository for tutorials: https://github.com/ThiagoMaria-SecurityIT/Tutoriais 
   
 ## About the Author   
 
