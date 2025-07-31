@@ -98,7 +98,7 @@ For any questions or issues, please open an issue in this repository.
 I will change some of the features in the next months:
 
 * The name of the tab Employee Management to Physical Access Control.
-* Actual logs are for Physical Access and Logical Access but not for the creation of rules - I will implement those too.
+* Actual logs are for Physical Access and Logical Access but not for the creation of rules - I will implement too.
 ## Contact: 
 
 🤵🏽[LinkedIn: thiago-cequeira-99202239](https://www.linkedin.com/in/thiago-cequeira-99202239/) \
