@@ -75,21 +75,17 @@ Designed for users who need reliable password generation without unnecessary com
    - Pyperclip automatically clears clipboard after 30s  
 ---
 ## ⚡ Quick Start  
-1. **Download**: Click "Code" → "Download ZIP"  
-2. **Run**: Double-click `main.py` (needs [Python](https://www.python.org/downloads/) and **pyperclip** (pip install pyperclip))
-   
-## Alternative Installation 
+
+1. Clone this repository/folder or download the source files
+
+2. Navigate to project directory
+
+3. Install pyperclip  
 ```bash
-# Clone the repository
-git clone https://github.com/ThiagoMaria-SecurityIT/SecurePassGenerator.git
-
-# Navigate to project directory
-cd SecurePassGenerator
-
-# Install pyperclip
 pip install pyperclip
-
+```
 # Run the application
+```python
 python main.py
 ``` 
 ---
@@ -107,21 +103,12 @@ python main.py
 - Consider your operating system's clipboard management policies
 
 ## Development
+
 ```python
 # Key Architecture Components
 - PasswordGeneratorApp class (main application logic)
 - Tkinter-based GUI
 - Thread-safe clipboard management
-```
-
----
-🛡️ Security Specs  
-```
-SecurityLevel = {  
-    "Randomness": "OS-grade (/dev/urandom)",   
-    "Memory": "Auto-wiped",  
-    "Clipboard": "30s time bomb 💣"  
-}  
 ```
 ---
 
