@@ -58,8 +58,8 @@ This Python application provides a comprehensive solution for managing both phys
 ## Installation
 
 1. Ensure Python 3.x is installed on your system
-2. Clone this repository or download the source files
-3. Run the application with: `python mainlogical.py`
+2. Clone this repository/folder or download the source files
+3. Run the application with: `python main.py`
 
 ## Usage
 
