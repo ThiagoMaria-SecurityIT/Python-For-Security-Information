@@ -37,12 +37,16 @@ A Tkinter-based GUI tool for managing Python virtual environments and executing 
 
 ---
 
-## 🚀 Installation
+## 🚀 Quick Start
 
+1. Clone this folder/repository or download the files
+   
+2. Install requirements
 ```bash
-git clone https://github.com/yourusername/virtualenv-cheat-sheet.git
-cd virtualenv-cheat-sheet
 pip install -r requirements.txt
+```
+3. Run the file  
+```bash
 python main.py
 ```
 
