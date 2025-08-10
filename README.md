@@ -36,7 +36,7 @@ They are organized by category. Feel free to explore, use, and contribute!
 
 >[!IMPORTANT]  
 > - Some of my repo are under developtment.  
-> - Use with cautiona and discretion  
+> - Use with caution and discretion  
 > - Msg me if you found any of issue or want to give a feedback   
 
 
